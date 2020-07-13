@@ -1,18 +1,11 @@
-(function () {
-'use strict';
+(function(angular) {
+  'use strict';
+angular.module('FirstModule', [])
+  .controller('MyController', ['$scope', function($scope) {
+    $scope.initialname = 'Monica';
 
-angular.
-
-angular.module('myFirstApp', [])
-
-// scope: shares data between the view and the viewmodel (angualr.js-spezifische funktion)
-
-  .controller('myFirstController', function ($scope) {
-    $SCOPE.name = "Monica";
-    $SCOPE. sayHello = function () {
-      return "Hello Babe"
-    }
-
-  });
-
-})();
+    $scope.sayHello = function() {
+      $scope.greeting = 'Hello ' + $scope.username + '!';
+    };
+  }]);
+})(window.angular);
