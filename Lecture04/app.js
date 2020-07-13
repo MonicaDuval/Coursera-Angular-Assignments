@@ -1,11 +1,11 @@
 (function () {
 'use strict';
 
-n.
-angular.module('myFirstApp', []);
+
+angular.module('myFirstApp', [])
 
   .controller('myFirstController', function () {
 
-  })
+  });
 
 })();
