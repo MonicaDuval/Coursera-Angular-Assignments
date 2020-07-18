@@ -1,11 +1,11 @@
 (function(angular) {
   'use strict';
-angular.module('FirstModule', [])
+angular.module('FirstModul', [])
   .controller('MyController', ['$scope', function($scope) {
-    $scope.initialname = 'Monica';
+    $scope.name = 'Monica';
 
-    $scope.sayHello = function() {
-      $scope.greeting = 'Hello ' + $scope.username + '!';
+    $scope.sayHello = function () {
+      return "Hello";
     };
   }]);
 })(window.angular);
