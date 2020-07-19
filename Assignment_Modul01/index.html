@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="//code.angularjs.org/1.8.0/angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Lunch Checker</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <style>
+      .message { font-size: 1.3em; font-weight: bold; }
+      body {
+        background-image: url('https://images.pexels.com/photos/326268/pexels-photo-326268.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+<body style="font-family:verdana;font-size:80%;color:white;" ng-app="LunchCheck">
+
+
+   <div class="container" ng-controller="FoodCheckerController">
+
+     <h1>Did I Eat Too Much for Lunch?</h1><p>
+
+         <div ng-model="list">
+             <input type="text" style="width:450px;"
+             placeholder="List all the dishes you had for lunch today."
+             ng-model="list">
+         </div><p>
+
+         <div ng-model="list">
+           <button ng-click="checkList()">Is this too much?</button><p>
+           {{advice}}
+         </div>
+
+
+   </div>
+
+</body>
+</html>
